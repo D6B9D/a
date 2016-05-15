@@ -1,0 +1,65 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>APP DIST BEBIDAS</title>
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	<!-- <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" /> -->
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+	<link rel="stylesheet" href="js/jQueryMobile/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+	<script src="js/jquery-1.12.3.min.js"></script>
+	<script src="js/jQueryMobile/jquery.mobile-1.4.5.min.js"></script>
+	
+</head>
+
+<body>
+
+	<div data-role="page" id='pageProduto'>
+	
+		<script src="js/functions.js"></script>
+		<script src="js/dom_produto.js"></script>
+		
+		<div data-role="panel" id="left_menu_prod" data-position="left" data-display="overlay">
+		</div>
+		
+		<div data-role="header" data-position="fixed">
+			<h1>APP DIST BEBIDAS</h1>
+		    <a href="#left_menu_prod" data-icon="bars" class="ui-btn-right">Menu</a>
+		</div>
+		
+		<div role="main" class="main">
+		
+			<h3>Detalhes do Produto</h3>
+			
+			<div class='loading' id='loading_produto'></div>
+			
+			<h2 id='desc_abreviado'></h2>
+			
+			<div id='image'></div>
+			
+			<p id='desc_produto'></p>
+			
+			<p id='val_prod'></p>
+			
+			<p><span id='nome_distribuidora'></span> <span id='id_distribuidora'></span></p>
+			
+			<div id='erro'></div>
+		
+		
+		
+		</div>
+		
+		<div data-role="footer" class='footer' data-position="fixed"><a href='javascript:history.go(-1);'>VOLTAR</a></div>
+			
+		</div>
+	
+	</div>
+</body>
+</html>
