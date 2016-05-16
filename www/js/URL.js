@@ -1,0 +1,1 @@
+var urlhost = "http://localhost";

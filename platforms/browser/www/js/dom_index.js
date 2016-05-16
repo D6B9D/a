@@ -9,7 +9,7 @@ $( document ).on( "pagecreate", "#pageIndex", function() {
 	var ac_options = [];
 	
 	$.ajax({
-        url: "http://10.0.0.100/b/autocomplete_produtos.php",
+        url: urlhost +"/php/autocomplete_produtos.php",
         dataType: "jsonp",
         crossDomain: true
     })
@@ -18,7 +18,7 @@ $( document ).on( "pagecreate", "#pageIndex", function() {
         	ac_options.push(val);
         });
     } )
-    .error   ( function ( response ) { } )
+    .error   ( function ( request, status, error ) {  alert(status+'\n'+error); } )
     .complete( function ( response ) { } )
     .then    ( function ( response ) { } );
 	
@@ -54,7 +54,7 @@ $( document ).on( "pagecreate", "#pageIndex", function() {
 		if(query && query.length>0) {
 			
 			$.ajax({
-		        url: "http://10.0.0.100/b/pesquisa_produtos.php",
+		        url: urlhost +"/php/pesquisa_produtos.php",
 		        dataType: "jsonp",
 		        crossDomain: true,
                 data: {
@@ -63,12 +63,11 @@ $( document ).on( "pagecreate", "#pageIndex", function() {
 		    })
 		    .success ( function ( response ) {
 		    	$.each( response, function ( i, produto ) {
-		    		//alert(val);
-		    		html += "<li><a href='produto.html?id=" + produto.id + "' data-transition='slide'><div class='lista_produtos_img'></div><div class='lista_produtos_nome'>" + produto.desc_abreviado + "</div><div class='lista_produtos_valor'>" + produto.val_prod + "</div></a></li>";
+		    		html += "<li><a href='produto.html?id=" + produto.id + "' data-transition='slide'><div class='lista_produtos_img' style='background-image:url("+urlhost +"/images/produtos/"+produto.image+");'></div><div class='lista_produtos_nome'>" + produto.desc_abreviado + "</div><div class='lista_produtos_valor'>" + produto.val_prod + "</div></a></li>";
 		        });
 		    	$ul.html( html );
 		    } )
-		    .error   ( function ( response ) { } )
+		    .error   ( function ( request, status, error ) { /* alert(status+'\n'+error); */ } )
 		    .complete( function ( response ) { } )
 		    .then    ( function ( response ) {
 		    	$ul.listview( "refresh" );
@@ -86,6 +85,7 @@ $( document ).on( "pagecreate", "#pageIndex", function() {
 	
 	
 	
+	// GEOLOCALIZACAO
 	
 	var geoOnSuccess = function(position) {
 		
@@ -99,8 +99,8 @@ $( document ).on( "pagecreate", "#pageIndex", function() {
               'Speed: '             + position.coords.speed             + '<br>' +
               'Timestamp: '         + position.timestamp                + '<br>'
 		;
-		
 		var reverse_geo_url = "https://maps.googleapis.com/maps/api/geocode/json?latlng="+position.coords.latitude+','+position.coords.longitude;
+		
 		
 		$.ajax({
 	        url: reverse_geo_url,
@@ -130,6 +130,9 @@ $( document ).on( "pagecreate", "#pageIndex", function() {
 		navigator.geolocation.getCurrentPosition(geoOnSuccess, geoOnError);
     
 	});
+	
+	// FIM GEOLOCALIZACAO
+	
 });
 
 

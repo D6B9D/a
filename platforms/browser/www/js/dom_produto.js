@@ -13,7 +13,7 @@ $(document).on('pagebeforeshow', "#pageProduto",function () {
 	if(id_prod && id_prod>0) {
     	
     	$.ajax({
-            url: "http://10.0.0.100/b/produto.php",
+            url: urlhost + "/php/produto.php",
             dataType: "jsonp",
             crossDomain: true,
             data: {
@@ -24,9 +24,19 @@ $(document).on('pagebeforeshow', "#pageProduto",function () {
         .error   ( function ( response ) { /* alert(response); console.log(response); */ })
         .complete( function ( response ) { $('#loading_produto').hide(); })
         .then    ( function ( response ) {
-        	$.each( response, function ( id, val ) {
-                $('#'+id).html(val);
-            });
+        	
+        	//alert('http://10.0.0.100/b/images/produtos/'+response.image);
+        	
+        	$('#image').css('background-image', 'url('+urlhost+'/images/produtos/'+response.image+')');
+        	$('#image').css('display','block');
+        	//alert($('#image').css('background-image'));
+        	
+        	$('#desc_abreviado').html(response.desc_abreviado);
+        	$('#desc_produto').html(response.desc_produto);
+        	$('#val_prod').html(response.val_prod);
+        	$('#nome_distribuidora').html(response.nome_distribuidora);
+        	$('#id_distribuidora').html(response.id_distribuidora);
+        	$('#erro').html(response.erro);
         	
         });
     } else {

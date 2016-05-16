@@ -13,7 +13,7 @@ $(document).on('pagebeforeshow', "#pageProduto",function () {
 	if(id_prod && id_prod>0) {
     	
     	$.ajax({
-            url: "http://10.0.0.100/b/produto.php",
+            url: urlhost + "/php/produto.php",
             dataType: "jsonp",
             crossDomain: true,
             data: {
@@ -27,7 +27,7 @@ $(document).on('pagebeforeshow', "#pageProduto",function () {
         	
         	//alert('http://10.0.0.100/b/images/produtos/'+response.image);
         	
-        	$('#image').css('background-image', 'url(http://10.0.0.100/b/images/produtos/'+response.image+')');
+        	$('#image').css('background-image', 'url('+urlhost+'/images/produtos/'+response.image+')');
         	$('#image').css('display','block');
         	//alert($('#image').css('background-image'));
         	

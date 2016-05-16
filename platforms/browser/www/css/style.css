@@ -19,6 +19,15 @@ img {
 }
 
 
+.produto_img {
+	height: 150px;
+	background-size: contain;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-color: #FFF;
+	display: none;
+}
+
 
 .lista_produtos_img {
 	width: 20%;
@@ -26,6 +35,9 @@ img {
 	background-color: #FFF;
 	display: block;
 	float: left;
+	background-size: contain;
+	background-position: center center;
+	background-repeat: no-repeat;
 }
 .lista_produtos_nome {
 	display: block;
