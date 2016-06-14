@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>APP DIST BEBIDAS</title>
+<meta name="format-detection" content="telephone=no" />
+<meta name="msapplication-tap-highlight" content="no" />
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+<!-- <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" /> -->
+<meta name="viewport"
+	content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+<link rel="stylesheet"
+	href="js/jQueryMobile/jquery.mobile-1.4.5.min.css" />
+<link rel="stylesheet" href="css/easy-autocomplete.css" />
+<link rel="stylesheet" href="css/style.css" />
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript">
+	app.initialize();
+</script>
+<script src="js/jquery-1.12.3.min.js"></script>
+<script type="text/javascript" src="js/environment.js"></script>
+<script src="js/jQueryMobile/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/jquery.easy-autocomplete.min.js"></script>
+<script src="js/dom_cadastro.js"></script>
+<script src="js/URL.js"></script>
+<style type="text/css">
+.campocadastro {
+	margin-top: 5px !important;
+	margin-bottom: 5px !important;
+}
+</style>
+</head>
+
+<body>
+	<div data-role="page" id='pageCadastro'>
+
+		<div data-role="header" data-position="fixed">
+			<h1>APP DIST BEBIDAS</h1>
+		</div>
+
+		<div role="main" class="main">
+			<div align="right">
+				<label style="font-size: 80%">Campos * são obrigatorios.</label>
+			</div>
+
+			<div align="left">
+				<h3 class="campocadastro">Usuário*</h3>
+			</div>
+			<input id=c_desc_usuario   placeholder="Obrigatório">
+			<div align="left">
+				<h3 class="campocadastro">Senha*</h3>
+			</div>
+			<input id='c_desc_senha'  placeholder="Obrigatório">
+
+			<div align="left">
+				<h3 class="campocadastro">Confirmar senha*</h3>
+			</div>
+
+			<input id='c_desc_senha_conf'  placeholder="Obrigatório">
+
+			<div align="left">
+				<h3 class="campocadastro">E-mail*</h3>
+			</div>
+			<input id='c_desc_email' placeholder="Obrigatório">
+			<div align="left">
+				<h3 class="campocadastro">Nome</h3>
+			</div>
+			<input id='c_desc_nome' placeholder="">
+			<div align="left">
+				<h3 class="campocadastro">Telefone</h3>
+			</div>
+			<input id='c_desc_telefone' placeholder="">
+			<div align="left">
+				<h3 class="campocadastro">Cidade*</h3>
+			</div>
+			<select id="c_cod_cidade">
+				<option value="1" >Santa Cruz do Sul</option>
+			</select>
+
+			<div align="left">
+				<h3 class="campocadastro">Bairro</h3>
+			</div>
+			<select id="c_cod_bairro">
+			</select>
+			<div align="left">
+				<h3 class="campocadastro">Endereço</h3>
+			</div>
+			<input id='c_desc_endereco' placeholder="Rua - Número - Complemento">
+
+			<br>
+
+			<button id='c_cadastrar' data-type="button">Cadastrar</button>
+		</div>
+
+
+	</div>
+
+</body>
+</html>
