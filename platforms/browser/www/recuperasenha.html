@@ -32,64 +32,18 @@
 </head>
 
 <body>
-	<div data-role="page" id='pageCadastro'>
-		<script src="js/dom_cadastro.js"></script>
+	<div data-role="page" id='pageRecsenha'>
+		<script src="js/dom_recsenha.js"></script>
 		<div data-role="header" data-position="fixed">
 			<h1>APP DIST BEBIDAS</h1>
 		</div>
 
 		<div role="main" class="main">
-			<div align="right">
-				<label style="font-size: 80%">Campos * são obrigatorios.</label>
-			</div>
-
 			<div align="left">
-				<h3 class="campocadastro">Usuário*</h3>
+				<h3 class="campocadastro">Insira seu e-mail cadastrado</h3>
 			</div>
-			<input id=c_desc_usuario placeholder="Obrigatório">
-			<div align="left">
-				<h3 class="campocadastro">Senha*</h3>
-			</div>
-			<input id='c_desc_senha' placeholder="Obrigatório">
-
-			<div align="left">
-				<h3 class="campocadastro">Confirmar senha*</h3>
-			</div>
-
-			<input id='c_desc_senha_conf' placeholder="Obrigatório">
-
-			<div align="left">
-				<h3 class="campocadastro">E-mail*</h3>
-			</div>
-			<input id='c_desc_email' placeholder="Obrigatório">
-			<div align="left">
-				<h3 class="campocadastro">Nome</h3>
-			</div>
-			<input id='c_desc_nome' placeholder="">
-			<div align="left">
-				<h3 class="campocadastro">Telefone</h3>
-			</div>
-			<input id='c_desc_telefone' placeholder="">
-			<div align="left">
-				<h3 class="campocadastro">Cidade*</h3>
-			</div>
-			<select id="c_cod_cidade">
-				<option value="1">Santa Cruz do Sul</option>
-			</select>
-
-			<div align="left">
-				<h3 class="campocadastro">Bairro</h3>
-			</div>
-			<select id="c_cod_bairro">
-			</select>
-			<div align="left">
-				<h3 class="campocadastro">Endereço</h3>
-			</div>
-			<input id='c_desc_endereco' placeholder="Rua - Número - Complemento">
-
-			<br>
-
-			<button id='c_cadastrar' data-type="button">Cadastrar</button>
+			<input id='r_desc_email' placeholder="Obrigatório">  
+			<button id='r_recuperar' data-type="button">Recuperar senha</button>
 		</div>
 
 

@@ -9,7 +9,7 @@ $( document ).on( "pagecreate", "#pageIndex", function() {
 	var ac_options = [];
 	
 	$.ajax({
-        url: urlhost +"/php/autocomplete_produtos.php",
+        url: urlhost +"/php/m_autocomplete_produtos.php",
         dataType: "jsonp",
         crossDomain: true
     })
@@ -54,7 +54,7 @@ $( document ).on( "pagecreate", "#pageIndex", function() {
 		if(query && query.length>0) {
 			
 			$.ajax({
-		        url: urlhost +"/php/pesquisa_produtos.php",
+		        url: urlhost +"/php/m_pesquisa_produtos.php",
 		        dataType: "jsonp",
 		        crossDomain: true,
                 data: {

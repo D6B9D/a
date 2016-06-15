@@ -22,7 +22,7 @@ function loadBairros(){
 	
 	$.ajax({
 		type : "POST",
-		url : urlhost + "/php/cadastro_user.php",
+		url : urlhost + "/php/m_cadastro_user.php",
 		dataType : "jsonp",
 		crossDomain : true,
 		data : {
@@ -70,7 +70,7 @@ function cadastrar() {
 	
 	$.ajax({
 		type : "POST",
-		url : urlhost + "/php/cadastro_user.php",
+		url : urlhost + "/php/m_cadastro_user.php",
 		dataType : "jsonp",
 		crossDomain : true,
 		data : {

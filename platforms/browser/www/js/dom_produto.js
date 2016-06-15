@@ -13,7 +13,7 @@ $(document).on('pagebeforeshow', "#pageProduto",function () {
 	if(id_prod && id_prod>0) {
     	
     	$.ajax({
-            url: urlhost + "/php/produto.php",
+            url: urlhost + "/php/m_produto.php",
             dataType: "jsonp",
             crossDomain: true,
             data: {
