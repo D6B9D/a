@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>APP DIST BEBIDAS</title>
+<meta name="format-detection" content="telephone=no" />
+<meta name="msapplication-tap-highlight" content="no" />
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+<!-- <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" /> -->
+<meta name="viewport"
+	content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+<link rel="stylesheet"
+	href="js/jQueryMobile/jquery.mobile-1.4.5.min.css" />
+<link rel="stylesheet" href="css/easy-autocomplete.css" />
+<link rel="stylesheet" href="css/style.css" />
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript">
+	app.initialize();
+</script>
+<script src="js/jquery-1.12.3.min.js"></script>
+<script type="text/javascript" src="js/environment.js"></script>
+<script src="js/jQueryMobile/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/jquery.easy-autocomplete.min.js"></script>
+
+<script src="js/URL.js"></script>
+</head>
+
+<body>
+
+	<div data-role="page" id='pagePedidos'>
+		<script src="js/dom_pedidos.js"></script> 
+		<script src="js/autoNumeric.1.9.22.js"></script>
+
+			<div data-role="header" data-position="fixed">
+			<h1>APP DIST BEBIDAS</h1>
+		</div>
+
+		<div role="main" class="main">
+
+			<h3>Situação</h3>
+
+			<select id="p_flag_status">
+				<option value="">Todas</option>
+				<option value="A">Aberto</option>
+				<option value="E">Em envio</option>
+				<option value="O">Finalizado</option>
+				<option value="R">Recusado</option>
+				
+			</select>
+
+			<ul data-role='listview' id='lista_pedidos' class='lista_pedidos'></ul>
+
+
+		</div>
+
+
+
+
+	</div>
+
+</body>
+</html>
